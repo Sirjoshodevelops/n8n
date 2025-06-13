@@ -89,13 +89,7 @@ const isEnterprise = computed(
 const isTelemetryEnabled = computed((): boolean => {
 	return settingsStore.isTelemetryEnabled;
 });
-const showGitHubButton = computed(
-	() =>
-		!isEnterprise.value &&
-		!settingsStore.settings.inE2ETests &&
-		!githubButtonHidden.value &&
-		isTelemetryEnabled.value,
-);
+const showGitHubButton = computed(() => false);
 
 const parentFolderForBreadcrumbs = computed<FolderShortInfo | undefined>(() => {
 	if (!workflow.value.parentFolder) {

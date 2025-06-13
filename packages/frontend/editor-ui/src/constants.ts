@@ -96,7 +96,7 @@ export const BREAKPOINT_MD = 992;
 export const BREAKPOINT_LG = 1200;
 export const BREAKPOINT_XL = 1920;
 
-export const DOCS_DOMAIN = 'docs.n8n.io';
+export const DOCS_DOMAIN = 'docs.aiemployee.com';
 export const BUILTIN_NODES_DOCS_URL = `https://${DOCS_DOMAIN}/integrations/builtin/`;
 export const BUILTIN_CREDENTIALS_DOCS_URL = `https://${DOCS_DOMAIN}/integrations/builtin/credentials/`;
 export const DATA_PINNING_DOCS_URL = `https://${DOCS_DOMAIN}/data/data-pinning/`;
@@ -104,16 +104,15 @@ export const DATA_EDITING_DOCS_URL = `https://${DOCS_DOMAIN}/data/data-editing/`
 export const SCHEMA_PREVIEW_DOCS_URL = `https://${DOCS_DOMAIN}/data/schema-preview/`;
 export const MFA_DOCS_URL = `https://${DOCS_DOMAIN}/user-management/two-factor-auth/`;
 export const NPM_PACKAGE_DOCS_BASE_URL = 'https://www.npmjs.com/package/';
-export const NPM_KEYWORD_SEARCH_URL =
-	'https://www.npmjs.com/search?q=keywords%3An8n-community-node-package';
+export const NPM_KEYWORD_SEARCH_URL = '';
 export const N8N_QUEUE_MODE_DOCS_URL = `https://${DOCS_DOMAIN}/hosting/scaling/queue-mode/`;
-export const COMMUNITY_NODES_INSTALLATION_DOCS_URL = `https://${DOCS_DOMAIN}/integrations/community-nodes/installation/gui-install/`;
-export const COMMUNITY_NODES_RISKS_DOCS_URL = `https://${DOCS_DOMAIN}/integrations/community-nodes/risks/`;
-export const COMMUNITY_NODES_BLOCKLIST_DOCS_URL = `https://${DOCS_DOMAIN}/integrations/community-nodes/blocklist/`;
+export const COMMUNITY_NODES_INSTALLATION_DOCS_URL = '';
+export const COMMUNITY_NODES_RISKS_DOCS_URL = '';
+export const COMMUNITY_NODES_BLOCKLIST_DOCS_URL = '';
 export const CUSTOM_NODES_DOCS_URL = `https://${DOCS_DOMAIN}/integrations/creating-nodes/code/create-n8n-nodes-module/`;
 export const EXPRESSIONS_DOCS_URL = `https://${DOCS_DOMAIN}/code-examples/expressions/`;
-export const N8N_PRICING_PAGE_URL = 'https://n8n.io/pricing';
-export const N8N_MAIN_GITHUB_REPO_URL = 'https://github.com/n8n-io/n8n';
+export const N8N_PRICING_PAGE_URL = 'https://aiemployee.com/pricing';
+export const N8N_MAIN_GITHUB_REPO_URL = '';
 
 export const NODE_INSERT_SPACER_BETWEEN_INPUT_GROUPS = false;
 export const NODE_MIN_INPUT_ITEMS_COUNT = 4;
@@ -314,7 +313,7 @@ export const AI_EVALUATION = 'Evaluation';
 export const AI_UNCATEGORIZED_CATEGORY = 'Miscellaneous';
 export const AI_CODE_TOOL_LANGCHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.toolCode';
 export const AI_WORKFLOW_TOOL_LANGCHAIN_NODE_TYPE = '@n8n/n8n-nodes-langchain.toolWorkflow';
-export const REQUEST_NODE_FORM_URL = 'https://n8n-community.typeform.com/to/K1fBVTZ3';
+export const REQUEST_NODE_FORM_URL = 'https://aiemployee.com/contact';
 
 // Node Connection Types
 export const NODE_CONNECTION_TYPE_ALLOW_MULTIPLE: NodeConnectionType[] = [
@@ -806,9 +805,7 @@ export const ALLOWED_HTML_TAGS = [
 	'mark',
 ];
 
-export const CLOUD_CHANGE_PLAN_PAGE = window.location.host.includes('stage-app.n8n.cloud')
-	? 'https://stage-app.n8n.cloud/account/change-plan'
-	: 'https://app.n8n.cloud/account/change-plan';
+export const CLOUD_CHANGE_PLAN_PAGE = 'https://aiemployee.com/account/change-plan';
 
 export const CLOUD_TRIAL_CHECK_INTERVAL = 5000;
 
