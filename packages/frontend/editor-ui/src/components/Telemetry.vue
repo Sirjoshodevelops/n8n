@@ -35,7 +35,8 @@ const isTelemetryEnabled = computed((): boolean => {
 });
 
 const selfInstallSrc = computed((): string => {
-	return `https://n8n.io/self-install?instanceId=${rootStore.instanceId}&userId=${currentUserId.value}`;
+	// Disabled for AI Employee white-label
+	return '';
 });
 
 watch(telemetry, () => {
@@ -68,6 +69,6 @@ function init() {
 </script>
 
 <template>
-	<iframe v-if="isTelemetryEnabled && currentUserId" v-show="false" :src="selfInstallSrc" />
+	<iframe v-if="isTelemetryEnabled && currentUserId && selfInstallSrc" v-show="false" :src="selfInstallSrc" />
 	<span v-else v-show="false" />
 </template>

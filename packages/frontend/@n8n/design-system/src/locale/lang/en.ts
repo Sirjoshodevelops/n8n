@@ -54,7 +54,7 @@ export default {
 	'assistantChat.you': 'You',
 	'assistantChat.quickRepliesTitle': 'Quick reply 👇',
 	'assistantChat.placeholder.1': () =>
-		'I can answer most questions about building workflows in n8n.',
+		'I can answer most questions about building workflows in AI Employee.',
 	'assistantChat.placeholder.2': 'For specific tasks, you’ll see the',
 	'assistantChat.placeholder.3': 'button in the UI.',
 	'assistantChat.placeholder.4': 'How can I help?',

@@ -9,7 +9,7 @@ export const ACTION_RECORDED_PAGE = `
 	<head>
 		<meta charset='UTF-8' />
 		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-		<link rel='icon' type='image/png' href='https://n8n.io/favicon.ico' />
+		<link rel='icon' type='image/png' href='https://aiemployee.com/favicon.ico' />
 		<link
 			href='https://fonts.googleapis.com/css?family=Open+Sans'
 			rel='stylesheet'
@@ -50,7 +50,7 @@ export function createEmailBodyWithN8nAttribution(
 	instanceId?: string,
 ) {
 	const utm_campaign = instanceId ? `&utm_campaign=${instanceId}` : '';
-	const n8nWebsiteLink = `https://n8n.io/?utm_source=n8n-internal&utm_medium=send-and-wait${utm_campaign}`;
+	const aiEmployeeWebsiteLink = `https://aiemployee.com/?utm_source=aiemployee-internal&utm_medium=send-and-wait${utm_campaign}`;
 	return `
 <!DOCTYPE html>
 <html lang='en'>
@@ -94,9 +94,9 @@ export function createEmailBodyWithN8nAttribution(
 					style="text-align: center; color: #7e8186; font-family: Arial, sans-serif; font-size: 12px;">
 					<tr>
 						<td>
-							<a href=${n8nWebsiteLink}
+							<a href=${aiEmployeeWebsiteLink}
 								target="_blank" style="color: #7e8186; text-decoration: none;">Automated with
-								n8n</a>
+								AI Employee</a>
 						</td>
 					</tr>
 				</table>

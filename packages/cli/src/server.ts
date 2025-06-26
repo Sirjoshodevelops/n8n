@@ -372,12 +372,19 @@ export class Server extends AbstractServer {
 			const isTLSEnabled =
 				this.globalConfig.protocol === 'https' && !!(this.sslKey && this.sslCert);
 			const isPreviewMode = process.env.N8N_PREVIEW_MODE === 'true';
-			const cspDirectives = jsonParse<{ [key: string]: Iterable<string> }>(
+			// Allow iframe embedding from any domain
+			const configuredCsp = jsonParse<{ [key: string]: Iterable<string> }>(
 				Container.get(SecurityConfig).contentSecurityPolicy,
 				{
 					errorMessage: 'The contentSecurityPolicy is not valid JSON.',
 				},
 			);
+			
+			// Override frame-ancestors to allow all domains for iframe embedding
+			const cspDirectives = {
+				...configuredCsp,
+				'frame-ancestors': ["'self'", "*"], // Allow embedding from any domain
+			};
 			const cspReportOnly = Container.get(SecurityConfig).contentSecurityPolicyReportOnly;
 			const securityHeadersMiddleware = helmet({
 				contentSecurityPolicy: isEmpty(cspDirectives)
@@ -389,8 +396,7 @@ export class Server extends AbstractServer {
 								...cspDirectives,
 							},
 						},
-				xFrameOptions:
-					isPreviewMode || inE2ETests || inDevelopment ? false : { action: 'sameorigin' },
+				xFrameOptions: false, // Disabled to allow iframe embedding from any domain
 				dnsPrefetchControl: false,
 				// This is only relevant for Internet-explorer, which we do not support
 				ieNoOpen: false,

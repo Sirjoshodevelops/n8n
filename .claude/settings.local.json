@@ -7,7 +7,10 @@
       "Bash(find:*)",
       "Bash(cp:*)",
       "Bash(grep:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(curl:*)",
+      "Bash(ls:*)",
+      "Bash(convert:*)"
     ],
     "deny": []
   }

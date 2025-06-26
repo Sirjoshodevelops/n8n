@@ -7,21 +7,21 @@ import { workflowFields, workflowOperations } from './WorkflowDescription';
 import { searchWorkflows } from './WorkflowLocator';
 
 /**
- * The n8n node provides access to the n8n API.
+ * The AI Employee node provides access to the AI Employee API.
  *
- * See: https://docs.n8n.io/api/api-reference/
+ * See: https://docs.aiemployee.com/api/api-reference/
  */
 export class N8n implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'n8n',
+		displayName: 'AI Employee',
 		name: 'n8n',
 		icon: 'file:n8n.svg',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Handle events and perform actions on your n8n instance',
+		description: 'Handle events and perform actions on your AI Employee instance',
 		defaults: {
-			name: 'n8n',
+			name: 'AI Employee',
 		},
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],
