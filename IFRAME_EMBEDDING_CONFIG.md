@@ -11,8 +11,9 @@ This document explains the security configurations that have been modified to al
 
 ### 2. Content Security Policy (CSP) - Frame Ancestors
 **File:** `/packages/cli/src/server.ts`
-- Modified CSP configuration to set `frame-ancestors: ["'self'", "*"]`
+- Modified CSP configuration to set `frameAncestors: ["'self'", "*"]`
 - This explicitly allows the application to be embedded in iframes from any origin
+- Includes all required CSP directives to prevent helmet.js errors
 
 ### 3. CORS Configuration (Enhanced)
 **File:** `/packages/cli/src/middlewares/cors.ts`
